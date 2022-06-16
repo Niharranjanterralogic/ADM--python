@@ -1,0 +1,19 @@
+
+{% extends  'studentapp/base.html' %}
+
+{% block title %} Student Post {% endblock %}
+
+{% block  body %}
+    {% if form %}
+       <form method="POST">
+          {% csrf_token %}
+          <table>
+              {{ form }}
+          </table>
+           <input type="submit" value="Post Data" class="btn btn-success"
+                  style="margin-left: 100px;">
+       </form>
+    {% else %}
+       <h1>Form object is not created to display form</h1>
+    {% endif %}
+{% endblock %}

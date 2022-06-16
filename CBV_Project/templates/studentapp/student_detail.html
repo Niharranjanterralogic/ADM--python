@@ -1,0 +1,24 @@
+
+{% extends 'studentapp/base.html' %}
+
+{% block title %} Student Detail {% endblock %}
+
+{% block  body %}
+   {% if student %}
+      <ul style="list-style-type: none">
+         <li>Student  Id is : {{ student.id }}</li>
+         <li>Student  Name is : {{ student.sname }}</li>
+         <li>Student  Marks are : {{ student.marks }}</li>
+         <li>Student  Email is : {{ student.email }}</li>
+         <li>Student  Mobile Number is : {{ student.mobile }}</li>
+         <li>Student  Address  is : {{ student.address }}</li>
+      </ul>
+   {% else %}
+      <h1>Requested resource not avaialble to display</h1>
+   {% endif %}
+
+    <h1>
+       <a href="{% url 'student_list' %}">goto table</a>
+    </h1>
+
+{% endblock %}

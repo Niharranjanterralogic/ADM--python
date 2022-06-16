@@ -1,0 +1,23 @@
+
+{% extends  'studentapp/base.html' %}
+
+{% block  title %}
+    employee Detail
+{% endblock %}
+
+{% block  body %}
+    {% if student %}
+       <ol>
+          <li>Student Id is : {{ student.id }}</li>
+          <li>Student Sname is : {{ student.sname }}</li>
+          <li>Student Marks is : {{ student.marks }}</li>
+          <li>Student Email is : {{ student.email }}</li>
+          <li>Student Mobile is : {{ student.mobile }}</li>
+          <li>Student Address is : {{ student.address }}</li>
+       </ol>
+    {% else %}
+       <h1>{{ error }}</h1>
+    {% endif %}
+
+    <a href="{% url  'student_list' %}" class="btn btn-primary btn-sm"> goto table</a>
+{% endblock %}
