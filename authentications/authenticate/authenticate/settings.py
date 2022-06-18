@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-w)^*p!!m7=eivxdt*(b_i9onos&137yw*m)r!)#h#@lp5_(zb6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -82,14 +82,32 @@ WSGI_APPLICATION = 'authenticate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME':'mydb',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydb',
+        'USER' : 'root',
+        'PASSWORD' : 'root',
     }
 }
 
-DATABASES['default']=dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES=['default']=dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'authenticatedb',
+#        'USER': 'postgres',
+#        'PASSWORD': 'Nihar@123',
+#        'HOST': 'localhost',
+#        'PORT': '5432',
+#    }
+# }
 
 
 # Password validation
@@ -129,7 +147,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 # STATICFILES_DIRS=(
 #     os.path.join(BASE_DIR,'static'),
 # )
