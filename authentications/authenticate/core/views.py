@@ -8,8 +8,8 @@ def registerview(request):
     if request.method=='POST':
         form=createuserform(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect("home")
+            form.save()                                               
+            return redirect("home") #here if register id successfull then move to ist page                    #register page view
     else:
         form=createuserform()
     context={
@@ -18,7 +18,7 @@ def registerview(request):
     return render(request,'common/register.html',context)
 
 def homeview(request):
-    return render(request,'common/home.html')
+    return render(request,'common/home.html')  # where the login register forgotpasss
 
 def welcomeview(request):
     return render(request,'common/welcome.html')

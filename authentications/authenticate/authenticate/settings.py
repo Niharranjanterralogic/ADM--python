@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 
-import django_heroku
-import dj_database_url
+# import django_heroku
+# import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-w)^*p!!m7=eivxdt*(b_i9onos&137yw*m)r!)#h#@lp5_(zb6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -49,7 +49,7 @@ CRISPY_TEMPLATE_PACK='bootstrap'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -63,7 +63,7 @@ ROOT_URLCONF = 'authenticate.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR,'templates'],
+        'DIRS': [BASE_DIR,'templates'],     ################# templates sections 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,10 +84,11 @@ WSGI_APPLICATION = 'authenticate.wsgi.application'
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
+#         'ENGINE': 'django.db.backends.my',
 #         'NAME':'mydb',
 #     }
 # }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -147,17 +148,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-django_heroku.settings(locals())
-# STATICFILES_DIRS=(
-#     os.path.join(BASE_DIR,'static'),
-# )
+# django_heroku.settings(locals())
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'static')
+]
 # STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 
 
 #media files
 
-# MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-# MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'static/images')
+MEDIA_URL='/images/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500&family=Oxygen:wght@700&family=Public+Sans:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gantari:wght@300&display=swap");
+
+.body {
+  background-color: #e5e5e5;
+}
+.rpheader {
+  display: flex;
+  border-bottom: 1px solid gainsboro;
+}
+.rpheader img {
+  height: 40px;
+  width: 40px;
+  margin-top: 20px;
+  margin-left: 70px;
+}
+.rpheader h1 {
+  margin-left: 20px;
+}
+.deleteheader {
+  height: 30px;
+  width: 30px;
+}
+.pm {
+  margin-top: 40px;
+  margin-left: 70px;
+  font-family: "Public Sans", sans-serif;
+}
+.pm h1 {
+  font-weight: 100;
+  font-size: xx-large;
+}
+.nump {
+  display: flex;
+  margin-top: 40px;
+  font-family: "Public Sans", sans-serif;
+  margin-bottom: 60px;
+}
+.nump input {
+  font-size: small;
+  border-radius: 10px;
+  height: 40px;
+  width: 400px;
+  margin-left: 30px;
+  text-align: center;
+  border: 3px solid gainsboro;
+}
+.per {
+  margin-left: 80px;
+  font-size: x-large;
+  font-weight: 600;
+  margin-top: -1px;
+}
+.right {
+  margin-left: 350px;
+  display: flex;
+}
+.del {
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 0px;
+}
+
+.newp {
+  height: 50px;
+  width: 150px;
+  margin-left: 50px;
+  border-radius: 10px;
+  background: #56c6dc;
+  border: 0px;
+  color: white;
+}
+Table {
+  width: 100%;
+}
+th {
+  text-align: center;
+  font-size: large;
+  padding: 15px;
+  border-top: 2px solid #dbe8e8;
+  border-bottom: 2px solid #dbe8e8;
+  font-family: "Gantari", sans-serif;
+}
+td {
+  text-align: center;
+  table-layout: fixed;
+  padding: 15px;
+  border-bottom: 2px solid #dbe8e8;
+  font-family: "Gantari", sans-serif;
+}
+.delimg {
+  height: 30px;
+  width: 30px;
+}
+.editimg {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 7px;
+  margin-left: 15px;
+}
+.del > img,
+.del > span {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.tableimage {
+  height: 50px;
+  width: 50px;
+}
+.dtab {
+  background: white;
+}

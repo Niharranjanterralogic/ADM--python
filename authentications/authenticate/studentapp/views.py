@@ -76,7 +76,6 @@ def StudentDeleteView(request,pk):
             }
             return render(request, 'studentapp/student_delete.html', context)
 
-
 def StudentDetailView(request,pk):
     try:
         student = Student.objects.get(id=pk)
@@ -90,6 +89,7 @@ def StudentDetailView(request,pk):
             "student": student
         }
         return render(request, 'studentapp/student_detail.html', context)
+        
 
 
 
