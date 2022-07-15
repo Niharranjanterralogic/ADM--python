@@ -39,8 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'myapp',
-    'rest_framework'
+    'core',
+    'rest_framework',
 ]
+
+# default_app_config = 'core.user.apps.UserConfig'
+
+# AUTH_USER_MODEL = 'core_user.User'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

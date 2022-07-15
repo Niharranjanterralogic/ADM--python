@@ -14,4 +14,4 @@ class Student(models.Model):
     noofdownloads=models.IntegerField()
 
     def __str__(self):
-        return self.first_name 
+        return self.firstName 
